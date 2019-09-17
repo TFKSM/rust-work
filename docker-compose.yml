@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rust:
+    build: .
+    volumes:
+      - ./src:/usr/src/myapp
+    user: root
+    tty: true
+    ports:
+      - 8999:80
